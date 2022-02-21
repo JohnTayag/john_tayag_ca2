@@ -27,11 +27,16 @@ include('includes/header.php');
             </select>
             <br>
             <label>Name:</label>
-            <input type="input" name="name">
+            <input type="input" name="name"
+            required>
             <br>
 
             <label>List Price:</label>
-            <input type="input" name="price">
+            <input type="input" name="price"
+            placeholder = "Price must be above $10"
+         
+            required 
+            >
             <br>        
             
             <label>Image:</label>
