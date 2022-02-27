@@ -28,21 +28,25 @@ include('includes/header.php');
             <br>
             <label>Name:</label>
             <input type="input" name="name"
-            required>
+            placeholder = "Enter Name"
+            required
+            pattern ="[a-zA-Z0-9\s]+"
+            >
             <br>
 
             <label>List Price:</label>
             <input type="input" name="price"
             placeholder = "Price must be above $10"
             required
-         
+           
+            pattern ="[0-9]+(\\.[0-9][0-9]?)?"
             >
             <br>        
             
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" /
+            <input type="file" name="image" accept="image/*" 
             required
-            >
+           />
             <br>
             
             <label>&nbsp;</label>

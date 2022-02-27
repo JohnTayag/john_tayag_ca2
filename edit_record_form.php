@@ -32,6 +32,7 @@ include('includes/header.php');
 
             <label>Name:</label>
             <input type="input" name="name"
+            pattern ="[a-zA-Z0-9\s]+"
                    value="<?php echo $records['name']; ?>"
                    required
                    >
@@ -39,15 +40,12 @@ include('includes/header.php');
 
             <label>List Price:</label>
             <input type="input" name="price"
-                   value="<?php echo $records['price']; ?>"
-                   required
-                   >
+            pattern ="[0-9]+(\\.[0-9][0-9]?)?"
+                   value="<?php echo $records['price']; ?>">
             <br>
 
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" /
-            required
-            >
+            <input type="file" name="image" accept="image/*" />
             <br>            
             <?php if ($records['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
