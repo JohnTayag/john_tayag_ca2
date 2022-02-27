@@ -1,0 +1,25 @@
+table {
+  border: 5px solid red;
+}
+
+footer {
+  clear: both;
+  margin-top: 1em;
+  border-top: 2px solid black;
+}
+
+footer p {
+  font-size: 12px;
+  margin: 1em;
+}
+
+header {
+  margin: 0;
+  border-bottom: 2px solid black;
+}
+
+header h1 {
+  font-size: 20px;
+  color: purple;
+}
+/*# sourceMappingURL=mainstyles.css.map */

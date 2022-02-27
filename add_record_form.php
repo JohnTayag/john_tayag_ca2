@@ -34,13 +34,15 @@ include('includes/header.php');
             <label>List Price:</label>
             <input type="input" name="price"
             placeholder = "Price must be above $10"
+            required
          
-            required 
             >
             <br>        
             
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
+            <input type="file" name="image" accept="image/*" /
+            required
+            >
             <br>
             
             <label>&nbsp;</label>

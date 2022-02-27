@@ -25,21 +25,29 @@ include('includes/header.php');
 
             <label>Category ID:</label>
             <input type="category_id" name="category_id"
-                   value="<?php echo $records['categoryID']; ?>">
+                   value="<?php echo $records['categoryID']; ?>"
+                   required
+                   >
             <br>
 
             <label>Name:</label>
             <input type="input" name="name"
-                   value="<?php echo $records['name']; ?>">
+                   value="<?php echo $records['name']; ?>"
+                   required
+                   >
             <br>
 
             <label>List Price:</label>
             <input type="input" name="price"
-                   value="<?php echo $records['price']; ?>">
+                   value="<?php echo $records['price']; ?>"
+                   required
+                   >
             <br>
 
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
+            <input type="file" name="image" accept="image/*" /
+            required
+            >
             <br>            
             <?php if ($records['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
