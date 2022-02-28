@@ -26,12 +26,26 @@ include('includes/header.php');
             <?php endforeach; ?>
             </select>
             <br>
-            <label>Name:</label>
+            <label for="userid">Name:</label>
             <input type="input" name="name"
+            name="userid"
+            id="userid"
             placeholder = "Enter Name"
             required
             pattern ="[a-zA-Z0-9\s]+"
-            >
+            onBlur="userid_validation();"
+            ><span id="uid_err"></span>
+            <br>
+
+            <label for="colorid">Color:</label>
+            <input type="input" name="color"
+            name="colorid"
+            id="colorid"
+            placeholder = "Enter Color"
+            required
+            pattern ="[a-zA-Z\s]+"
+            onBlur="Color_validation();"
+            ><span id="COLOR_err"></span>
             <br>
 
             <label>List Price:</label>
@@ -54,6 +68,9 @@ include('includes/header.php');
             <br>
         </form>
         <p><a href="index.php">View Homepage</a></p>
+        <script type="text/javascript" src="validation.js"></script>
     <?php
 include('includes/footer.php');
+
 ?>
+

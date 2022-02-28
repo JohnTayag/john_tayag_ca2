@@ -9,8 +9,7 @@ $statement = $db->prepare($query);
 $statement->bindValue(':record_id', $record_id);
 $statement->execute();
 $records = $statement->fetch(PDO::FETCH_ASSOC);
-$statement->closeCursor();
-?>
+$statement->closeCursor();?>
 <!-- the head section -->
  <div class="container">
 <?php
@@ -34,6 +33,14 @@ include('includes/header.php');
             <input type="input" name="name"
             pattern ="[a-zA-Z0-9\s]+"
                    value="<?php echo $records['name']; ?>"
+                   required
+                   >
+            <br>
+
+            <label>Color:</label>
+            <input type="input" name="color"
+            pattern ="[a-zA-Z\s]+"
+                   value="<?php echo $records['color']; ?>"
                    required
                    >
             <br>
