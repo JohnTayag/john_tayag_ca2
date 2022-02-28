@@ -17,52 +17,56 @@ include('includes/header.php');
 ?>
         <h1>Edit Product</h1>
         <form action="edit_record.php" method="post" enctype="multipart/form-data"
+       
               id="add_record_form">
+              <div class="mb-3">
             <input type="hidden" name="original_image" value="<?php echo $records['image']; ?>" />
             <input type="hidden" name="record_id"
                    value="<?php echo $records['recordID']; ?>">
 
-            <label>Category ID:</label>
+            <label class="form-label">Category ID:</label>
             <input type="category_id" name="category_id"
                    value="<?php echo $records['categoryID']; ?>"
                    required
-                   >
+                   class="form-control">
             <br>
 
-            <label>Name:</label>
+            <label class="form-label">Name:</label>
             <input type="input" name="name"
             pattern ="[a-zA-Z0-9\s]+"
                    value="<?php echo $records['name']; ?>"
                    required
-                   >
+                   class="form-control">
             <br>
 
-            <label>Color:</label>
+            <label class="form-label">Color:</label>
             <input type="input" name="color"
             pattern ="[a-zA-Z\s]+"
                    value="<?php echo $records['color']; ?>"
                    required
-                   >
+                   class="form-control">
             <br>
 
-            <label>List Price:</label>
+            <label class="form-label">List Price:</label>
             <input type="input" name="price"
             pattern ="[0-9]+(\\.[0-9][0-9]?)?"
-                   value="<?php echo $records['price']; ?>">
+                   value="<?php echo $records['price']; ?>"
+                   class="form-control">
             <br>
 
-            <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
+            <label class="form-label">Image:</label>
+            <input type="file" name="image" accept="image/*" 
+            class="form-control">
             <br>            
+
             <?php if ($records['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
             <?php } ?>
-            
             <label>&nbsp;</label>
+            </div>
             <input type="submit" value="Save Changes">
             <br>
         </form>
-        <p><a href="index.php">View Homepage</a></p>
     <?php
 include('includes/footer.php');
 ?>

@@ -18,7 +18,8 @@ include('includes/header.php');
               id="add_record_form">
 
             <label>Category:</label>
-            <select name="category_id">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example"
+             name="category_id">
             <?php foreach ($categories as $category) : ?>
                 <option value="<?php echo $category['categoryID']; ?>">
                     <?php echo $category['categoryName']; ?>
@@ -26,7 +27,8 @@ include('includes/header.php');
             <?php endforeach; ?>
             </select>
             <br>
-            <label for="userid">Name:</label>
+
+            <label class="form-label" for="userid">Name:</label>
             <input type="input" name="name"
             name="userid"
             id="userid"
@@ -34,10 +36,11 @@ include('includes/header.php');
             required
             pattern ="[a-zA-Z0-9\s]+"
             onBlur="userid_validation();"
-            ><span id="uid_err"></span>
+            class="form-control">
+            <span id="uid_err"></span>
             <br>
 
-            <label for="colorid">Color:</label>
+            <label class="form-label" for="colorid">Color:</label>
             <input type="input" name="color"
             name="colorid"
             id="colorid"
@@ -45,29 +48,29 @@ include('includes/header.php');
             required
             pattern ="[a-zA-Z\s]+"
             onBlur="Color_validation();"
-            ><span id="COLOR_err"></span>
+            class="form-control">
+            <span id="COLOR_err"></span>
             <br>
 
-            <label>List Price:</label>
+            <label class="form-label">List Price:</label>
             <input type="input" name="price"
             placeholder = "Price must be above $10"
             required
-           
-            pattern ="[0-9]+(\\.[0-9][0-9]?)?"
-            >
+            class="form-control"
+            pattern ="[0-9]+(\\.[0-9][0-9]?)?">
             <br>        
             
-            <label>Image:</label>
+            <label class="form-label">Image:</label>
             <input type="file" name="image" accept="image/*" 
-            required
-           />
+            class="form-control"
+            required>
             <br>
             
             <label>&nbsp;</label>
-            <input type="submit" value="Add Record">
+            <input class="btn btn-primary" type="submit" value="Add Record">
             <br>
         </form>
-        <p><a href="index.php">View Homepage</a></p>
+      
         <script type="text/javascript" src="validation.js"></script>
     <?php
 include('includes/footer.php');
