@@ -46,17 +46,18 @@ include('includes/header.php');
 <section>
 <!-- display a table of records -->
 <h2><?php echo $category_name; ?></h2>
-<table>
+<table class="table">
 <tr>
-<th>Image</th>
-<th>Name</th>
-<th>Color</th>
-<th>Price</th>
-<th>Delete</th>
-<th>Edit</th>
+<th scope="col">Image</th>
+<th scope="col">Name</th>
+<th scope="col">Color</th>
+<th scope="col">Price</th>
+<th scope="col">Delete</th>
+<th scope="col">Edit</th>
 </tr>
 
 <?php foreach ($records as $record) : ?>
+   
 <tr>
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $record['name']; ?></td>

@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
  $dsn = 'mysql:host=localhost;dbname=ca2_serverside';
  $username = 'D00236472';
  $password = 'D00236472';
@@ -16,7 +16,7 @@ $output ='';
 if (isset($_POST['search'])){
     $searchq = $_POST['search'];
     $searchq = preg_replace("#[^0-9a-z]#i","",$searchq);
-    $query = mysql_query("SELECT * FROM records Where color LIKE '%$searchq%' ORDER BY recordID DESC");
+    $query = mysql_query("SELECT * FROM records WHERE name LIKE '%$searchq%' OR color LIKE '%$searchq%' ORDER BY recordID DESC");
     $count = mysql_num_rows($query);
     if($count == 0){
         $output = 'There was no search results!';
@@ -30,4 +30,4 @@ if (isset($_POST['search'])){
         }
     }
 }
-?>
+?> -->

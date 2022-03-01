@@ -28,16 +28,15 @@ include('includes/header.php');
             </select>
             <br>
 
-            <label class="form-label" for="userid">Name:</label>
+            <label class="form-label" for="nameid">Name:</label>
             <input type="input" name="name"
-            name="userid"
-            id="userid"
+            name="nameid"
+            id="nameid"
             placeholder = "Enter Name"
             required
-            pattern ="[a-zA-Z0-9\s]+"
-            onBlur="userid_validation();"
+            onBlur="name_validation();"
             class="form-control">
-            <span id="uid_err"></span>
+            <span id="name_err"></span>
             <br>
 
             <label class="form-label" for="colorid">Color:</label>
@@ -46,18 +45,20 @@ include('includes/header.php');
             id="colorid"
             placeholder = "Enter Color"
             required
-            pattern ="[a-zA-Z\s]+"
             onBlur="Color_validation();"
             class="form-control">
             <span id="COLOR_err"></span>
             <br>
 
-            <label class="form-label">List Price:</label>
+            <label class="form-label" for="priceid">List Price:</label>
             <input type="input" name="price"
-            placeholder = "Price must be above $10"
+            name="priceid"
+            id="priceid"
+            placeholder = "Enter Price"
             required
-            class="form-control"
-            pattern ="[0-9]+(\\.[0-9][0-9]?)?">
+            onBlur="Price_validation();"
+            class="form-control">
+            <span id="price_err"></span>
             <br>        
             
             <label class="form-label">Image:</label>

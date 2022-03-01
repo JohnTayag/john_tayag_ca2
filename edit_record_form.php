@@ -9,7 +9,16 @@ $statement = $db->prepare($query);
 $statement->bindValue(':record_id', $record_id);
 $statement->execute();
 $records = $statement->fetch(PDO::FETCH_ASSOC);
-$statement->closeCursor();?>
+$statement->closeCursor();
+
+// $query = 'SELECT *
+//           FROM categories
+//           ORDER BY categoryID';
+// $statement = $db->prepare($query);
+// $statement->execute();
+// $categories = $statement->fetchAll();
+// $statement->closeCursor();?>
+
 <!-- the head section -->
  <div class="container">
 <?php
@@ -24,34 +33,55 @@ include('includes/header.php');
             <input type="hidden" name="record_id"
                    value="<?php echo $records['recordID']; ?>">
 
-            <label class="form-label">Category ID:</label>
+            <label class="form-label">Category ID  input:</label>
             <input type="category_id" name="category_id"
                    value="<?php echo $records['categoryID']; ?>"
                    required
                    class="form-control">
             <br>
 
-            <label class="form-label">Name:</label>
-            <input type="input" name="name"
+            <!-- <label>Category options:</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example"
+             name="category_id">
+            <?php foreach ($categories as $category) : ?>
+                <option value="<?php echo $category['categoryID']; ?>">
+                    <?php echo $category['categoryName']; ?>
+                </option>
+            <?php endforeach; ?>
+            </select>
+            <br> -->
+
+            <label class="form-label" for="nameid">Name:</label>
+            <input type="input" 
+            name="nameid"
+            id="nameid"
+            onBlur="name_validation();"
             pattern ="[a-zA-Z0-9\s]+"
                    value="<?php echo $records['name']; ?>"
                    required
                    class="form-control">
+                   <span id="name_err"></span>
             <br>
 
-            <label class="form-label">Color:</label>
+            <label class="form-label" for="colorid">Color:</label>
             <input type="input" name="color"
-            pattern ="[a-zA-Z\s]+"
+            name="colorid"
+            id="colorid"
+            onBlur="Color_validation();"
                    value="<?php echo $records['color']; ?>"
                    required
                    class="form-control">
+                   <span id="COLOR_err"></span>
             <br>
 
-            <label class="form-label">List Price:</label>
+            <label class="form-label" for="priceid">List Price:</label>
             <input type="input" name="price"
-            pattern ="[0-9]+(\\.[0-9][0-9]?)?"
+            name="priceid"
+            id="priceid"
+            onBlur="Price_validation();"
                    value="<?php echo $records['price']; ?>"
                    class="form-control">
+                   <span id="price_err"></span>
             <br>
 
             <label class="form-label">Image:</label>
@@ -67,6 +97,9 @@ include('includes/header.php');
             <input type="submit" value="Save Changes">
             <br>
         </form>
+        
+        <script type="text/javascript" src="validation.js"></script>
+
     <?php
 include('includes/footer.php');
 ?>
