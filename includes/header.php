@@ -27,6 +27,10 @@
         <li class="nav-item">
           <a class="nav-link" href="category_list.php">Manage Categories</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="colorwhite.php">White Clothes</a>
+        </li>
        
         <li class="nav-item dropdown">
           <a class="btn btn-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

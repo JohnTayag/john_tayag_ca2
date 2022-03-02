@@ -64,7 +64,7 @@ include('includes/header.php');
 <td class="right"><?php echo $record['color']; ?></td>
 <td class="right"><?php echo $record['price']; ?></td>
 
-
+<!-- delete -->
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"
@@ -73,6 +73,8 @@ value="<?php echo $record['recordID']; ?>">
 value="<?php echo $record['categoryID']; ?>">
 <input class="btn btn-primary" type="submit" value="Delete">
 </form></td>
+
+<!-- edit -->
 <td><form action="edit_record_form.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"
@@ -81,6 +83,7 @@ value="<?php echo $record['recordID']; ?>">
 value="<?php echo $record['categoryID']; ?>">
 <input class="btn btn-primary" type="submit" value="Edit">
 </form></td>
+
 </tr>
 <?php endforeach; ?>
 </table>
