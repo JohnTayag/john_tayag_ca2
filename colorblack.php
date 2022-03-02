@@ -8,7 +8,7 @@ require_once('database.php');
 
 
 // Get records for white clothes
-$queryRecords = "SELECT * FROM records WHERE color = 'white' ORDER BY recordID";
+$queryRecords = "SELECT * FROM records WHERE color = 'black' ORDER BY recordID";
 $statement3 = $db->prepare($queryRecords);
 // $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();

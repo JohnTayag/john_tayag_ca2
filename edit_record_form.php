@@ -11,13 +11,15 @@ $statement->execute();
 $records = $statement->fetch(PDO::FETCH_ASSOC);
 $statement->closeCursor();
 
-// $query = 'SELECT *
-//           FROM categories
-//           ORDER BY categoryID';
-// $statement = $db->prepare($query);
-// $statement->execute();
-// $categories = $statement->fetchAll();
-// $statement->closeCursor();?>
+$query = 'SELECT *
+          FROM categories
+          ORDER BY categoryID';
+$statement = $db->prepare($query);
+$statement->execute();
+$categories = $statement->fetchAll();
+$statement->closeCursor();
+
+?>
 
 <!-- the head section -->
  <div class="container">
