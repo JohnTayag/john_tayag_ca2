@@ -1,5 +1,10 @@
 <!-- the head section -->
 
+
+    <!--  require_once('colorwhite.php');
+
+    filterColor("white");  -->
+    
 <head>
   <title>PHP CRUD App</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -9,6 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
 </head>
 
 <!-- the body section -->
@@ -34,16 +40,16 @@
           <a class="nav-link" href="colorwhite.php">White Clothes</a>
         </li> -->
 
+        
 
-
-
-            <li class="nav-item dropdown">
+            <li 
+            class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Color
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="colorwhite.php">White</a></li>
-            <li><a class="dropdown-item" href="colorblack.php">Black</a></li>
+            <li><a  class="dropdown-item" href="colorwhite.php">White</a></li>
+            <li><a  class="dropdown-item" href="colorblack.php">Black</a></li>
             <li><a class="dropdown-item" href="coloryellow.php">Yellow</a></li>
           </ul>
         </li>
@@ -72,14 +78,12 @@
           <a class="nav-link disabled"></a>
         </li>
         </ul>
-        <!-- <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
-        <form class="d-flex" method="post" action="includes\search.php">
-          <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
-          <input class="btn btn-outline-success" type="submit" name="submit" value="Submit">
-        </form>
+      
+
+<form class="d-flex" action="includes\search.php" method="post">
+                        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="search">
+                        <button class="btn btn-outline-success" type="submit" name="submit">Search</button>
+                    </form>
       </div>
     </div>
   </nav>

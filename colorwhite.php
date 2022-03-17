@@ -1,10 +1,23 @@
+
 <?php
+// function filterColor($string){
 require_once('database.php');
 
 
 
 
 
+
+
+
+
+// if($_POST['color'] == 'white') {  
+//     // query to get all US records  
+//     $queryRecords = "SELECT * FROM records WHERE color = 'white' ORDER BY recordID";
+// }  
+// elseif($_POST['color'] == 'black') { 
+//     $queryRecords = "SELECT * FROM records WHERE color = 'black' ORDER BY recordID";
+// }
 
 
 // Get records for white clothes
@@ -75,4 +88,5 @@ value="<?php echo $record['categoryID']; ?>">
 </section>
 <?php
 include('includes/footer.php');
+// }
 ?>
