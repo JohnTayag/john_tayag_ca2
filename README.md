@@ -33,5 +33,8 @@ An interactive clothes crud php website.
 ### Below you can see the how to search for products:
 ![Alt Text](https://github.com/JohnTayag/john_tayag_ca2/blob/main/images/search.gif)
 
+### To view the website click below:
+[I'm an inline-style link](https://mysql05.comp.dkit.ie/D00236472/john_tayag_ca2/index.php)
+
 
 
