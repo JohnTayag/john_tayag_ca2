@@ -27,5 +27,11 @@ An interactive clothes crud php website.
 ### Below you can see the manage categories page:
 ![Alt text](https://github.com/JohnTayag/john_tayag_ca2/blob/main/images/categoryList.png)
 
+### Below you can see the how to filter between categories and colors:
+![Alt Text](https://github.com/JohnTayag/john_tayag_ca2/blob/main/images/dropdown-filter.gif)
+
+### Below you can see the how to search for products:
+![Alt Text](https://github.com/JohnTayag/john_tayag_ca2/blob/main/images/search.gif)
+
 
 
