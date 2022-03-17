@@ -22,10 +22,10 @@ An interactive clothes crud php website.
 | 3        | 1             | Adidas Jumper   | green    | 35       |    5723.jpg     |
 
 ### Below you can see the homepage:
-![Alt text](images\homepage.png)
+![Alt text](https://github.com/JohnTayag/john_tayag_ca2/blob/main/images/homepage.png)
 
 ### Below you can see the manage categories page:
-![Alt text](images\categoryList.png)
+![Alt text](https://github.com/JohnTayag/john_tayag_ca2/blob/main/images/categoryList.png)
 
 
 
